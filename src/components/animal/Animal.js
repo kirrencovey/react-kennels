@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
+import './Animal.css'
 
 class Animal extends Component {
     render() {
         return (
             <section className="animal">
-                <div>
+                <div className="animalName">
                     { this.props.animal.name }
                 </div>
-                <div>
-                {
+                <div>Owned By: {
                     this.props.owners.join(", ")
                 }
                 </div>
