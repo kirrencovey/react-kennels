@@ -6,7 +6,7 @@ class Animal extends Component {
         return (
             <section className="animal">
                 <div className="animalName">
-                    { this.props.animal.name }
+                    { this.props.animal.name } { this.props.animal.type }
                 </div>
                 <div>Owned By: {
                     this.props.owners.join(", ")
