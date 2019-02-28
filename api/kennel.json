@@ -109,11 +109,6 @@
       "id": 16,
       "name": "James",
       "type": "🐫"
-    },
-    {
-      "id": 17,
-      "name": "Spot",
-      "type": "🐫"
     }
   ],
   "owners": [
@@ -187,6 +182,41 @@
     {
       "id": 22,
       "animalId": 16,
+      "ownerId": 7
+    },
+    {
+      "id": 23,
+      "animalId": 1,
+      "ownerId": 3
+    },
+    {
+      "id": 24,
+      "animalId": 2,
+      "ownerId": 4
+    },
+    {
+      "id": 25,
+      "animalId": 3,
+      "ownerId": 6
+    },
+    {
+      "id": 26,
+      "animalId": 9,
+      "ownerId": 7
+    },
+    {
+      "id": 27,
+      "animalId": 11,
+      "ownerId": 3
+    },
+    {
+      "id": 28,
+      "animalId": 12,
+      "ownerId": 4
+    },
+    {
+      "id": 22,
+      "animalId": 14,
       "ownerId": 7
     }
   ]
