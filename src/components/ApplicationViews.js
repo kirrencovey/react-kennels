@@ -22,34 +22,34 @@ export default class ApplicationViews extends Component {
     }
 
     fireEmployee = (id) => {
-        EmployeeManager.delete(id)
+        EmployeeManager.delete(id, "employees")
             .then(employees => this.setState({ employees: employees }))
     }
 
     sendHomeAnimal = (id) => {
-        AnimalManager.delete(id)
+        AnimalManager.delete(id, "animals")
             .then(animals => this.setState({ animals: animals }))
     }
 
     deleteOwner = (id) => {
-        OwnerManager.delete(id)
+        OwnerManager.delete(id, "owners")
             .then(owners => this.setState({ owners: owners }))
-            .then(() => RelationshipManager.getAll())
+            .then(() => RelationshipManager.getAll("relationships"))
             .then(relationships => this.setState({ relationships: relationships }))
     }
 
     componentDidMount() {
         const newState = {}
 
-        AnimalManager.getAll()
+        AnimalManager.getAll("animals")
             .then(animals => newState.animals = animals)
-            .then(() => EmployeeManager.getAll())
+            .then(() => EmployeeManager.getAll("employees"))
             .then(employees => newState.employees = employees)
-            .then(() => OwnerManager.getAll())
+            .then(() => OwnerManager.getAll("owners"))
             .then(owners => newState.owners = owners)
-            .then(() => LocationManager.getAll())
+            .then(() => LocationManager.getAll("locations"))
             .then(locations => newState.locations = locations)
-            .then(() => RelationshipManager.getAll())
+            .then(() => RelationshipManager.getAll("relationships"))
             .then(relationships => newState.relationships = relationships)
             .then(() => this.setState(newState))
     }
