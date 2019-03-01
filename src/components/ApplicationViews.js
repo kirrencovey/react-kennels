@@ -11,6 +11,7 @@ import OwnerManager from '../modules/OwnerManager'
 import RelationshipManager from '../modules/RelationshipManager'
 import AnimalDetail from './animal/AnimalDetail'
 import OwnerDetail from './owner/OwnerDetail'
+import EmployeeDetail from './employee/EmployeeDetail';
 
 
 
@@ -73,9 +74,13 @@ export default class ApplicationViews extends Component {
                         relationships={this.state.relationships}
                         owners={this.state.owners} />
                 }} />
-                <Route path="/employees" render={(props) => {
+                <Route exact path="/employees" render={(props) => {
                     return <EmployeeList employees={this.state.employees}
                         fireEmployee={this.fireEmployee} />
+                }} />
+                <Route path="/employees/:employeeId(\d+)" render={(props) => {
+                    return <EmployeeDetail {...props} fireEmployee={this.fireEmployee}
+                        employees={this.state.employees} />
                 }} />
                 <Route exact path="/owners" render={(props) => {
                     return <OwnerList owners={this.state.owners}

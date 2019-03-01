@@ -11,7 +11,6 @@ class OwnerList extends Component {
                 this.props.owners.map(owner =>
                     <div className="owner" key={owner.id}>
                         {owner.name}<br />
-                        {owner.phone}<br />
                         <Link className="nav-link" to={`/owners/${owner.id}`}>Details</Link>
                         <button onClick={() => {
                             this.props.deleteOwner(owner.id)

@@ -23,18 +23,3 @@ export default class Animal extends Component {
         )
     }
 }
-
-
-
-            // <section>
-            //     <div className="animalName">
-            //         {this.props.animal.name} {this.props.animal.type}<br />
-            //         <Link className="nav-link" to={`/animals/${this.props.animal.id}`}>Details</Link>
-            //         <button onClick={() => {
-            //             this.props.sendHomeAnimal(this.props.animal.id)
-            //         }}>Send Home</button>
-            //     </div>
-                // <div>
-                //     Owned By: { this.props.owners.join(", ") }
-                // </div>
-            // </section>

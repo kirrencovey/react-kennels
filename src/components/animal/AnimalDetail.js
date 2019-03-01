@@ -36,25 +36,3 @@ export default class AnimalDetail extends Component {
         )
     }
 }
-
-
-
-
-{/* <section className="animal">
-                <div key={animal.id} className="card">
-                    <div className="card-body">
-                        <h1 className="emoji">{animal.type}</h1>
-                        <h4 className="card-title">
-                            {animal.name}
-                        </h4>
-                        <Owner owners={
-                                this.props.relationships.filter(a => a.animalId === animal.id)
-                                    .map(ownership => this.props.owners
-                                    .find(owner => owner.id === ownership.ownerId).name)} />
-                        <a href="#"
-                            onClick={() => this.props.deleteAnimal(animal.id)
-                                .then(() => this.props.history.push("/animals"))}
-                                className="card-link">Delete</a>
-                    </div>
-                </div>
-            </section> */}

@@ -3,11 +3,6 @@ import React, { Component } from "react"
 
 export default class OwnerDetail extends Component {
     render() {
-        /*
-            Using the route parameter, find the animal that the
-            user clicked on by looking at the `this.props.animals`
-            collection that was passed down from ApplicationViews
-        */
         const owner = this.props.owners.find(a => a.id === parseInt(this.props.match.params.ownerId)) || {}
 
         return (
@@ -18,6 +13,7 @@ export default class OwnerDetail extends Component {
                             {owner.name}
                         </h4>
                         <div>{owner.phone}</div>
+                        <div>{owner.address}</div>
                         <a href="#"
                             onClick={() => this.props.deleteOwner(owner.id)
                                 .then(() => this.props.history.push("/owners"))}
