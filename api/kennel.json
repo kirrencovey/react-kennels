@@ -2,19 +2,23 @@
   "employees": [
     {
       "id": 1,
-      "name": "Jessica Younker"
+      "name": "Jessica Younker",
+      "phone": "595-0183"
     },
     {
       "id": 2,
-      "name": "Jordan Nelson"
+      "name": "Jordan Nelson",
+      "phone": "728-5637"
     },
     {
       "id": 3,
-      "name": "Zoe LeBlanc"
+      "name": "Zoe LeBlanc",
+      "phone": "234-2398"
     },
     {
       "id": 4,
-      "name": "Blaise Roberts"
+      "name": "Blaise Roberts",
+      "phone": "968-0154"
     }
   ],
   "locations": [
@@ -115,22 +119,26 @@
     {
       "id": 3,
       "name": "Dani Adkins",
-      "phone": "369-1215"
+      "phone": "369-1215",
+      "address": "305 Maple Drive"
     },
     {
       "id": 4,
       "name": "Adam Oswalt",
-      "phone": "878-2673"
+      "phone": "878-2673",
+      "address": "227 Sage Lane"
     },
     {
       "id": 6,
       "name": "Angela Lee",
-      "phone": "404-1234"
+      "phone": "404-1234",
+      "address": "79 Lemon Avenue"
     },
     {
       "id": 7,
       "name": "Steve",
-      "phone": "123-4567"
+      "phone": "123-4567",
+      "address": "404 Error Road"
     }
   ],
   "relationships": [

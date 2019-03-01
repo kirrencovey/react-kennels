@@ -10,11 +10,7 @@ class AnimalList extends Component {
                     <div className="animal" key={animal.id}>
                         <Animal animal={animal}
                             sendHomeAnimal={this.props.sendHomeAnimal}
-                            owners={
-                                this.props.relationships.filter(a => a.animalId === animal.id)
-                                    .map(ownership => this.props.owners
-                                    .find(owner => owner.id === ownership.ownerId).name)
-                                } />
+                        />
                     </div>
                 )
             }
