@@ -19,6 +19,11 @@
       "id": 4,
       "name": "Blaise Roberts",
       "phone": "968-0154"
+    },
+    {
+      "name": "Johnny Bananas",
+      "phone": "283-4913",
+      "id": 5
     }
   ],
   "locations": [
@@ -179,6 +184,12 @@
       "name": "Steve",
       "phone": "123-4567",
       "address": "404 Error Road"
+    },
+    {
+      "name": "Angela",
+      "phone": "736-1038",
+      "address": "498 Buffalo Drive",
+      "id": 8
     }
   ],
   "relationships": [
