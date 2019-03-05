@@ -14,6 +14,13 @@ export default class Animal extends Component {
                         </h4>
                         <Link className="nav-link" to={`/animals/${this.props.animal.id}`}>Details</Link>
                         <button
+                            type="button"
+                            className="btn btn-success"
+                            onClick={() => {
+                                this.props.history.push(`/animals/${this.props.animal.id}/edit`)
+                            }}
+                            >Edit</button>
+                        <button
                             onClick={() => this.props.sendHomeAnimal(this.props.animal.id)
                                 .then(() => this.props.history.push("/animals"))}
                                 className="card-link">Delete</button>
