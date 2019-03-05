@@ -49,7 +49,7 @@ export default class AnimalEditForm extends Component {
     render() {
       return (
         <React.Fragment>
-          <form className="animalForm">
+          <form className="animalEditForm">
             <div className="form-group">
               <label htmlFor="animalName">Animal name</label>
               <input

@@ -12,5 +12,17 @@ export default Object.create(APIManager, {
             body: JSON.stringify(newOwner)
             }).then(data => data.json())
       }
+    },
+      updateOwner: {
+          value: function (editedOwner) {
+          return fetch(`${Settings.remoteURL}/owners/${editedOwner.id}`, {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify(editedOwner)
+          }).then(data => data.json())
+        }
+      }
     }
-})
+)
