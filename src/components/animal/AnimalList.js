@@ -20,6 +20,7 @@ class AnimalList extends Component {
                         <div className="animal" key={animal.id}>
                             <Animal animal={animal}
                                 sendHomeAnimal={this.props.sendHomeAnimal}
+                                history={this.props.history}
                             />
                         </div>
                     )

@@ -12,5 +12,16 @@ export default Object.create(APIManager, {
             body: JSON.stringify(newAnimal)
             }).then(data => data.json())
       }
+    },
+    updateAnimal: {
+        value: function (editedAnimal) {
+        return fetch(`${Settings.remoteURL}/animals/${editedAnimal.id}`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(editedAnimal)
+        }).then(data => data.json());
+      }
     }
 })

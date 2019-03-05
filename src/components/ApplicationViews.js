@@ -16,6 +16,7 @@ import AnimalForm from './animal/AnimalForm'
 import OwnerForm from './owner/OwnerForm'
 import EmployeeForm from './employee/EmployeeForm'
 import Login from './authentication/Login'
+import AnimalEditForm from "./animal/AnimalEditForm";
 
 
 
@@ -58,6 +59,16 @@ export default class ApplicationViews extends Component {
                 animals: animals
             })
     )
+
+    updateAnimal = (editedAnimalObject) => {
+        return AnimalManager.updateAnimal(editedAnimalObject)
+        .then(() => AnimalManager.getAll("animals"))
+        .then(animals => {
+          this.setState({
+            animals: animals
+          })
+        });
+      };
 
     deleteOwner = (id) => {
         OwnerManager.delete(id, "owners")
@@ -107,13 +118,19 @@ export default class ApplicationViews extends Component {
                         return <Redirect to="/login" />
                     }
                 }} />
-                <Route path="/animals/:animalId(\d+)" render={(props) => {
+                <Route exact path="/animals/:animalId(\d+)" render={(props) => {
                     return <AnimalDetail {...props}
                                 sendHomeAnimal={this.sendHomeAnimal}
                                 animals={this.state.animals}
                                 relationships={this.state.relationships}
                                 owners={this.state.owners} />
                 }} />
+                <Route path="/animals/:animalId(\d+)/edit" render={props => {
+                    return <AnimalEditForm {...props}
+                                employees={this.state.employees}
+                                updateAnimal={this.updateAnimal}/>
+                }}
+                />
                 <Route path="/animals/new" render={(props) => {
                     return <AnimalForm {...props}
                                 addAnimal={this.addAnimal}
